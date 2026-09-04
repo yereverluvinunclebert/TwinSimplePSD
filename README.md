@@ -76,7 +76,28 @@ to a transparent RC form.
 Create a design in Photoshop. Save each image element as a simple separate flattened layer, no effects. Place the resulting PSD in a folder that the program can access. 
 Use SimplePSD to extract the layers to a collection. SimplePSD will create a Cairo surface and a widget instance for all layers in the PSD each of which that can have properties and events assigned.
 
+**Example 1.**
 
+Private Sub Form_Load()
+    Const PSDFile As String = "c:\temp\your_file.psd"
+    Dim PSD As cSimplePSD, i As Long
+    Dim CC As cCairoContext
+    
+    ' Create the PSD-parser instance pointing to your file
+    Set PSD = New_c.SimplePSD(PSDFile) 
+    
+    ' Loop over all layers inside the PSD
+    For i = 0 To PSD.LayersCount - 1 
+        Debug.Print PSD.LayerAlphaPercent(i), PSD.LayerPath(i) 
+    Next i
+    
+    ' Write all stacked layers as a combined alpha-transparent .png
+    PSD.AllLayersSurface.WriteContentToPngFile PSDFile & ".png" 
+End Sub
+
+
+
+**Example 2.**
 
     'create the Top-Level-Form
     Set gaugeForm = Cairo.WidgetForms.Create(IIf(App.LogMode, AlphaNoTaskbarEntry, AlphaWithTaskbarEntry), gsWidgetName, True, 1, 1)
