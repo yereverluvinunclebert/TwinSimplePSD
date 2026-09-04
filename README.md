@@ -1,7 +1,7 @@
 
 # TwinSimplePSD
 A direct Replacement for RichClient's Simple PSD Parser for VB6 and TwinBasic. A clean-room, source-compatible reimplementation of RC6.cSimplePSD
-works with RC5 and 6 replacing the SimplePSD parser.
+works with RC5 and 6, replacing the SimplePSD parser.
 
 **Intent:**
 
@@ -18,7 +18,7 @@ the visible layer stack with Cairo.
 * Photoshop folder/group markers ("lsct"/"lsdk")
 * Common Photoshop blend modes that have direct Cairo equivalents
 
-** Deliberately not interpreted:** 
+**Deliberately not interpreted:** 
 
 * Text/vector/smart-object rendering
 * Adjustment/fill layer semantics
@@ -28,7 +28,7 @@ the visible layer stack with Cairo.
 * Group isolation/knockout and exact Photoshop group-opacity semantics
 * CMYK/Lab/Indexed/16-bit/32-bit/PSB
 '
-' RichClient is used for:
+**RichClient is still used within this class for the following:**
 * zlib           New_c.Crypt.ZLibDecompress
 * Cairo surfaces Cairo.CreateSurface / cCairoSurface.BindToArray
 * alpha          Cairo.PreMultiplyAlpha
@@ -36,19 +36,19 @@ the visible layer stack with Cairo.
 '
 ' No Win32 API declarations are used.
 '
-' Performance notes (V4):
+**Performance notes (V4):**
 * large byte-array copies use RichClient New_c.MemCopy where practical
 * zero-based Variant Byte() input is assigned by the VB runtime directly
 * RLE decode loops use linear source/destination positions
 * common alpha/no-mask surface packing uses a branch-free linear loop
 
 
-cSimplePSD.cls - the class that 
+cSimplePSD.cls - the Simple Parser class
 modSimplePSDFactory.bas - Factory helper for the clean-room cSimplePSD class.
-CSimplePsdReimpl.vbp
+CSimplePsdReimpl.vbp - the project file for VB6
 
-MTestSimplePSDPerformance.bas
-modSimplePSDCompare.bas
+MTestSimplePSDPerformance.bas - Optional Performance tester, not needed in the project
+modSimplePSDCompare.bas - Optional Comparison Tester, not needed in the project
 
 
 <img width="1078" height="1041" alt="pzCPURC50004" src="https://github.com/user-attachments/assets/637681f5-014b-4d56-93b5-83a5d51cc21c" />
