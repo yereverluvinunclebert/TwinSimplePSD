@@ -3,12 +3,13 @@
 A direct Replacement for RichClient's Simple PSD Parser for VB6 and TwinBasic. A clean-room, source-compatible reimplementation of RC6.cSimplePSD
 works with RC5 and 6 replacing the SimplePSD parser.
 
-** Intent: **
+**Intent:**
 
 A deliberately small PSD reader for the same sort of use as RC6.cSimplePSD: extracting ordinary raster layers into cCairoSurface objects and rendering
 the visible layer stack with Cairo.
 
-** Supported subset: **
+**Supported subset:**
+
 * PSD version 1 (not PSB)
 * RGB, 8 bits/channel
 * Per-layer R/G/B, transparency and user-mask channels
@@ -17,8 +18,8 @@ the visible layer stack with Cairo.
 * Photoshop folder/group markers ("lsct"/"lsdk")
 * Common Photoshop blend modes that have direct Cairo equivalents
 
+** Deliberately not interpreted:** 
 
-**  Deliberately not interpreted: ** 
 * Text/vector/smart-object rendering
 * Adjustment/fill layer semantics
 * Layer effects/styles
