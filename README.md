@@ -59,6 +59,9 @@ Fig 01. The Panzer CPU gauge RC5/6 widget created using RC6 and this SimplePSD p
 
 **Example Usage:**
 
+Create a design in Photoshop. Save each image element as a simple separate flattened layer, no effects. Place the resulting PSD in a folder that the program can access. 
+Use SimplePSD to extract the layers to a collection. SimplePSD will create a Cairo surface and a widget instance for all layers in the PSD each of which that can have properties and events assigned.
+
     'create the Top-Level-Form
     Set gaugeForm = Cairo.WidgetForms.Create(IIf(App.LogMode, AlphaNoTaskbarEntry, AlphaWithTaskbarEntry), gsWidgetName, True, 1, 1)
         gaugeForm.WidgetRoot.BackColor = -1 ' transparent
