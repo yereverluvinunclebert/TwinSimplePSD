@@ -99,7 +99,7 @@ End Sub
 
 **Example 2.**
 
-    'create the Top-Level-Form
+
     Set gaugeForm = Cairo.WidgetForms.Create(IIf(App.LogMode, AlphaNoTaskbarEntry, AlphaWithTaskbarEntry), gsWidgetName, True, 1, 1)
         gaugeForm.WidgetRoot.BackColor = -1 ' transparent
 
