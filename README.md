@@ -46,12 +46,12 @@ No Win32 API declarations are used.
 
 **Files:**
 
-cSimplePSD.cls - the Simple Parser class
-modSimplePSDFactory.bas - Factory helper for the clean-room cSimplePSD class.
-CSimplePsdReimpl.vbp - the project file for VB6
+	cSimplePSD.cls - the Simple Parser class
+	modSimplePSDFactory.bas - Factory helper for the clean-room cSimplePSD class.
+	CSimplePsdReimpl.vbp - the project file for VB6
 
-MTestSimplePSDPerformance.bas - Optional Performance tester, not needed in the project
-modSimplePSDCompare.bas - Optional Comparison Tester, not needed in the project
+	MTestSimplePSDPerformance.bas - Optional Performance tester, not needed in the project
+	modSimplePSDCompare.bas - Optional Comparison Tester, not needed in the project
 
 
 <img width="1078" height="1041" alt="pzCPURC50004" src="https://github.com/user-attachments/assets/637681f5-014b-4d56-93b5-83a5d51cc21c" />
