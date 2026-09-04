@@ -27,7 +27,7 @@ the visible layer stack with Cairo.
 * Clipping groups
 * Group isolation/knockout and exact Photoshop group-opacity semantics
 * CMYK/Lab/Indexed/16-bit/32-bit/PSB
-'
+
 **RichClient is still used within this class for the following:**
   
 * zlib           New_c.Crypt.ZLibDecompress
