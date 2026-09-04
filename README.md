@@ -67,7 +67,7 @@ Fig 01. The Panzer CPU gauge RC5/6 widget created using RC6 and this SimplePSD p
 
 **Example Usage:**
 
-If you look at this gitlab repo. [[https://github.com/yereverluvinunclebert/TwinSimplePSD](https://gitlab.com/yereverluvinunclebert/panzer-cpu-gauge-rc5-vb6)](https://gitlab.com/yereverluvinunclebert/panzer-cpu-gauge-rc5-vb6), the simplePSD parser is used to render the components 
+If you look at this gitlab repo. https://gitlab.com/yereverluvinunclebert/panzer-cpu-gauge-rc5-vb6 , the simplePSD parser is used to render the components 
 to a transparent RC form.
 
 Create a design in Photoshop. Save each image element as a simple separate flattened layer, no effects. Place the resulting PSD in a folder that the program can access. 
