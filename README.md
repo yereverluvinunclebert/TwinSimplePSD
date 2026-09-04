@@ -3,9 +3,9 @@
 A direct Replacement for RichClient's Simple PSD Parser for VB6 and TwinBasic. A clean-room, source-compatible reimplementation of RC6.cSimplePSD
 works with RC5 and 6, replacing the SimplePSD parser.
 
-**Author*
+**Author**
 
-ChatGPT at JBPro insistence.
+ChatGPT at JBPro's insistence.
 
 **Intent:**
 
