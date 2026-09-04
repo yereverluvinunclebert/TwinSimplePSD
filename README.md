@@ -1,11 +1,11 @@
 
 # TwinSimplePSD
 A direct Replacement for RichClient's Simple PSD Parser for VB6 and TwinBasic. A clean-room, source-compatible reimplementation of RC6.cSimplePSD
-works with RC5 and 6, replacing the SimplePSD parser.
+works with RC5 and 6, replacing Olaf's SimplePSD parser. Will compile to 32bit or 64bit with TwinBasic.
 
 **Author**
 
-ChatGPT at JBPro's insistence.
+ChatGPT at JBPro's insistence. Inspired by Olaf Schmidt's closed source SimplePSD parser in RC6.
 
 **Intent:**
 
