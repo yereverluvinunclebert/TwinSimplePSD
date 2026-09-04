@@ -59,16 +59,20 @@ No Win32 API declarations are used.
 <img width="1078" height="1041" alt="pzCPURC50004" src="https://github.com/user-attachments/assets/637681f5-014b-4d56-93b5-83a5d51cc21c" />
 Fig 01. The Panzer CPU gauge RC5/6 widget created using RC6 and this SimplePSD parser.
 
+.
+.
+.
 
 -o0o-
 
 **Example Usage:**
 
+If you look at this gitlab repo. [https://github.com/yereverluvinunclebert/TwinSimplePSD](https://gitlab.com/yereverluvinunclebert/panzer-cpu-gauge-rc5-vb6), the simplePSD parser is used to render the components 
+to a transparent RC form.
+
 Create a design in Photoshop. Save each image element as a simple separate flattened layer, no effects. Place the resulting PSD in a folder that the program can access. 
 Use SimplePSD to extract the layers to a collection. SimplePSD will create a Cairo surface and a widget instance for all layers in the PSD each of which that can have properties and events assigned.
 
-If you look at this gitlab repo. [https://github.com/yereverluvinunclebert/TwinSimplePSD](https://gitlab.com/yereverluvinunclebert/panzer-cpu-gauge-rc5-vb6), the simplePSD parser is used to render the components 
-to a transparent RC form.
 
 
     'create the Top-Level-Form
