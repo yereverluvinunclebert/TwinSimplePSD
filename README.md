@@ -3,6 +3,10 @@
 A direct Replacement for RichClient's Simple PSD Parser for VB6 and TwinBasic. A clean-room, source-compatible reimplementation of RC6.cSimplePSD
 works with RC5 and 6, replacing the SimplePSD parser.
 
+**Author*
+
+ChatGPT at JBPro insistence.
+
 **Intent:**
 
 A deliberately small PSD reader for the same sort of use as RC6.cSimplePSD: extracting ordinary raster layers into cCairoSurface objects and rendering
