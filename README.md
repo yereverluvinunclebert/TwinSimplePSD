@@ -1,6 +1,53 @@
 
 # TwinSimplePSD
-A direct Replacement for RichClient's Simple PSD Parser for VB6 and TwinBasic
+A direct Replacement for RichClient's Simple PSD Parser for VB6 and TwinBasic. A clean-room, source-compatible reimplementation of RC6.cSimplePSD
+'              works with RC5 and 6 replacing the SimplePSD parser.
+
+' Intent:
+'   A deliberately small PSD reader for the same sort of use as RC6.cSimplePSD:
+'   extracting ordinary raster layers into cCairoSurface objects and rendering
+'   the visible layer stack with Cairo.
+'
+' Supported subset:
+'   - PSD version 1 (not PSB)
+'   - RGB, 8 bits/channel
+'   - Per-layer R/G/B, transparency and user-mask channels
+'   - RAW, PackBits/RLE, ZIP and ZIP-with-prediction channel compression
+'   - Pascal and Unicode ("luni") layer names
+'   - Photoshop folder/group markers ("lsct"/"lsdk")
+'   - Common Photoshop blend modes that have direct Cairo equivalents
+'
+' Deliberately not interpreted:
+'   - Text/vector/smart-object rendering
+'   - Adjustment/fill layer semantics
+'   - Layer effects/styles
+'   - Vector masks
+'   - Clipping groups
+'   - Group isolation/knockout and exact Photoshop group-opacity semantics
+'   - CMYK/Lab/Indexed/16-bit/32-bit/PSB
+'
+' RichClient is used for:
+'   - zlib           New_c.Crypt.ZLibDecompress
+'   - Cairo surfaces Cairo.CreateSurface / cCairoSurface.BindToArray
+'   - alpha          Cairo.PreMultiplyAlpha
+'   - compositing    cCairoContext
+'
+' No Win32 API declarations are used.
+'
+' Performance notes (V4):
+'   - large byte-array copies use RichClient New_c.MemCopy where practical
+'   - zero-based Variant Byte() input is assigned by the VB runtime directly
+'   - RLE decode loops use linear source/destination positions
+'   - common alpha/no-mask surface packing uses a branch-free linear loop
+
+
+cSimplePSD.cls - the class that 
+modSimplePSDFactory.bas - Factory helper for the clean-room cSimplePSD class.
+CSimplePsdReimpl.vbp
+
+MTestSimplePSDPerformance.bas
+modSimplePSDCompare.bas
+
 
 <img width="1078" height="1041" alt="pzCPURC50004" src="https://github.com/user-attachments/assets/637681f5-014b-4d56-93b5-83a5d51cc21c" />
 
