@@ -29,19 +29,22 @@ the visible layer stack with Cairo.
 * CMYK/Lab/Indexed/16-bit/32-bit/PSB
 '
 **RichClient is still used within this class for the following:**
+  
 * zlib           New_c.Crypt.ZLibDecompress
 * Cairo surfaces Cairo.CreateSurface / cCairoSurface.BindToArray
 * alpha          Cairo.PreMultiplyAlpha
 * compositing    cCairoContext
-'
-' No Win32 API declarations are used.
-'
+
+No Win32 API declarations are used.
+
 **Performance notes (V4):**
+  
 * large byte-array copies use RichClient New_c.MemCopy where practical
 * zero-based Variant Byte() input is assigned by the VB runtime directly
 * RLE decode loops use linear source/destination positions
 * common alpha/no-mask surface packing uses a branch-free linear loop
 
+**Files:**
 
 cSimplePSD.cls - the Simple Parser class
 modSimplePSDFactory.bas - Factory helper for the clean-room cSimplePSD class.
@@ -53,15 +56,16 @@ modSimplePSDCompare.bas - Optional Comparison Tester, not needed in the project
 
 <img width="1078" height="1041" alt="pzCPURC50004" src="https://github.com/user-attachments/assets/637681f5-014b-4d56-93b5-83a5d51cc21c" />
 
-
+**Example Usage:**
 
     'create the Top-Level-Form
     Set gaugeForm = Cairo.WidgetForms.Create(IIf(App.LogMode, AlphaNoTaskbarEntry, AlphaWithTaskbarEntry), gsWidgetName, True, 1, 1)
         gaugeForm.WidgetRoot.BackColor = -1 ' transparent
 
     'With New_c.SimplePSD(PSD_FileNameOrByteArray)  'create a new PSD-Parser.instance (and load the passed content) only available in RC6
+    
     '  Here we use the FOSS/ChatGPT simple PSD parser (replica of Olaf's RC6 SimplePSD parser)
-    With SimplePSD(PSD_FileNameOrByteArray)  'create a new PSD-Parser.instance (and load the passed content)
+    With SimplePSD(PSD_FileNameOrByteArray)  'create a new PSD-Parser.instance (and load the passed content) available for both RC5 and RC6
         pPSDWidth = .Width
         pPSDHeight = .Height       'store the original Psd-Pixel-Width/Height in Private vars (as the base from which we calculate the zoomed Form-Width/Height)
 
